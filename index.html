@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Interactive Portfolio</h1>
+        <p class="subtitle">A showcase of JavaScript event handling & interactivity</p>
+        <div id="theme-toggle" title="Double-click to toggle dark mode!">&#127769;</div>
+    </header>
+
+    <main>
+        <section id="tab-section">
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="event-demo">Event Demo</button>
+                    <button class="tab-btn" data-tab="gallery">Image Gallery</button>
+                    <button class="tab-btn" data-tab="form">Form Validation</button>
+                </div>
+                
+                <div class="tab-content active" id="event-demo">
+                    <h2>Event Handling Demo</h2>
+                    
+                    <div class="demo-card">
+                        <h3>Button Click Events</h3>
+                        <button id="color-change-btn">Change My Color</button>
+                        <button id="text-change-btn">Change My Text</button>
+                    </div>
+                    
+                    <div class="demo-card">
+                        <h3>Hover Effects</h3>
+                        <div id="hover-box">
+                            <p>Hover over me!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="demo-card">
+                        <h3>Keypress Detection</h3>
+                        <p>Press any key to see its code below:</p>
+                        <div id="key-display">
+                            <span id="key-name">Press a key</span>
+                            <span id="key-code"></span>
+                        </div>
+                    </div>
+                    
+                    <!-- Long Press Demo -->
+                    <div class="demo-card">
+                        <h3>Long Press Demo</h3>
+                        <button id="long-press-btn">Press and hold me</button>
+                        <div id="long-press-progress"></div>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="gallery">
+                    <h2>Image Gallery</h2>
+                    <div class="gallery-container">
+                        <button id="prev-btn" class="gallery-nav">❮</button>
+                        <div class="gallery-image-container">
+                            <img src="" alt="Image 1" class="gallery-img showing">
+                            <img src="" alt="Image 2" class="gallery-img">
+                            <img src="" alt="Image 3" class="gallery-img">
+                            <img src="" alt="Image 4" class="gallery-img">
+                        </div>
+                        <button id="next-btn" class="gallery-nav">❯</button>
+                    </div>
+                    <div class="gallery-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                    </div>
+                </div>
+                
+                <div class="tab-content" id="form">
+                    <h2>Form Validation</h2>
+                    <form id="validation-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" required>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" required>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" required>
+                            <span class="error-message" id="password-error"></span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password:</label>
+                            <input type="password" id="confirm-password" required>
+                            <span class="error-message" id="confirm-password-error"></span>
+                        </div>
+                        
+                        <div class="password-strength">
+                            <div class="strength-label">Password Strength:</div>
+                            <div class="strength-meter">
+                                <div class="strength-value" id="strength-value"></div>
+                            </div>
+                            <div id="strength-text">None</div>
+                        </div>
+                        
+                        <button type="submit" id="submit-btn">Submit</button>
+                    </form>
+                    <div id="success-message"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="accordion-section">
+            <h2>Interactive Accordion</h2>
+            
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-header">What is this project?</button>
+                    <div class="accordion-content">
+                        <p>This is a showcase of JavaScript event handling and interactive elements, designed to demonstrate various techniques for creating engaging web experiences.</p>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">Which events are demonstrated?</button>
+                    <div class="accordion-content">
+                        <p>This project includes demonstrations of:</p>
+                        <ul>
+                            <li>Click events</li>
+                            <li>Hover effects</li>
+                            <li>Keypress detection</li>
+                            <li>Long press</li>
+                            <li>Double-click (hint: try the moon icon in the header)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">What interactive elements are included?</button>
+                    <div class="accordion-content">
+                        <p>The project includes:</p>
+                        <ul>
+                            <li>Color and text changing buttons</li>
+                            <li>An image gallery/slideshow</li>
+                            <li>Tab navigation</li>
+                            <li>This accordion component</li>
+                            <li>A form with validation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created for JavaScript Event Handling & Interactive Elements Assignment</p>
+        <p>© 2025 JavaScript Enthusiast</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
